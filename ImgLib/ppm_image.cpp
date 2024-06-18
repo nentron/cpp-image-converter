@@ -11,7 +11,6 @@ namespace img_lib {
 static const string_view PPM_SIG = "P6"sv;
 static const int PPM_MAX = 255;
 
-// реализуйте эту функцию самостоятельно
 bool SavePPM(const Path& file, const Image& image){
     ofstream ofs(file, ios::binary);
 

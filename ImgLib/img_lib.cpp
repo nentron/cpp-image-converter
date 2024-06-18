@@ -2,11 +2,11 @@
 
 namespace img_lib {
 
-Image::Image(int w, int h, Color fill)
+Image::Image(int w, int h, Color color)
     : width_(w)
     , height_(h)
     , step_(w)
-    , pixels_(static_cast<size_t>(step_ * height_), fill) {
+    , pixels_(static_cast<size_t>(step_ * height_), color) {
 }
 
 Color* Image::GetLine(int y) {
@@ -26,8 +26,6 @@ int Image::GetHeight() const {
     return height_;
 }
 
-// шаг задаёт смещение соседних строк изображения
-// он обычно совпадает с width, но может быть больше
 int Image::GetStep() const {
     return step_;
 }

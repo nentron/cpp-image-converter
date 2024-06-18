@@ -47,12 +47,10 @@ PACKED_STRUCT_BEGIN BitmapInfoHeader {
 }
 PACKED_STRUCT_END
 
-// функция вычисления отступа по ширине
 static int GetBMPStride(int w) {
     return 4 * ((w * 3 + 3) / 4);
 }
 
-// напишите эту функцию
 bool SaveBMP(const Path& file, const Image& image){
     std::ofstream ofs(file, std::ios::binary);
 
@@ -78,7 +76,7 @@ bool SaveBMP(const Path& file, const Image& image){
 
     return ofs.good();
 }
-// напишите эту функцию
+
 Image LoadBMP(const Path& file){
     std::ifstream ifs(file, std::ios::binary);
     if (!ifs){

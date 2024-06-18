@@ -12,7 +12,6 @@ using namespace std;
 
 namespace img_lib {
 
-// структура из примера LibJPEG
 struct my_error_mgr {
     struct jpeg_error_mgr pub;
     jmp_buf setjmp_buffer;
